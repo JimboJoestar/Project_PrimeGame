@@ -23,32 +23,32 @@ public class Dreadnaught_Movement : MonoBehaviour
     void Update()
     {
         //Storing input using Update for use in FixedUpdate
-        if (Input.GetKeyDown("w"))
+        if (Input.GetAxis("Vertical") >= 0)
         {
             throttle = true;
         }
-        if (Input.GetKeyUp("w"))
+        if (Input.GetAxis("Vertical") == 0)
         {
             throttle = false;
         } 
         
-        if (Input.GetKeyDown("d"))
+        if (Input.GetAxis("Horizontal") >= 0)
         {
             rotateRight = true;
         }
-        if (Input.GetKeyUp("d"))
-        {
-            rotateRight = false;
-        }
 
-        if (Input.GetKeyDown("a"))
+        if (Input.GetAxis("Horizontal") <= 0)
         {
             rotateLeft = true;
         }
-        if (Input.GetKeyUp("a"))
+
+        if (Input.GetAxis("Horizontal") == 0)
         {
+            rotateRight = false;
             rotateLeft = false;
         }
+
+        
     }
 
     void FixedUpdate() //used because Unity like physics stuff in fixedupdate?
