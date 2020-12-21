@@ -61,10 +61,11 @@ public class Dreadnaught_Movement : MonoBehaviour
         {
             rb.AddRelativeForce(0, 0, deltaForwardForce, ForceMode.VelocityChange);
         }
-        if (throttle&rotateRight == true)
+        if (throttle & rotateRight == true)
         {
             Quaternion deltaRotation = Quaternion.Euler(rotationVelocity * Time.deltaTime);
             rb.MoveRotation(rb.rotation * deltaRotation);
+            //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
 
             /*//Clamping rotation to prevent car from capsizing (DOESN'T WORK YET)
             rotationZ = rb.transform.localEulerAngles.z;
@@ -90,10 +91,11 @@ public class Dreadnaught_Movement : MonoBehaviour
                 rb.transform.localEulerAngles = new Vector3(rotationX, rb.transform.localEulerAngles.y + rotationVelocity * Time.deltaTime, -45);
             }*/
         }
-        if (throttle&rotateLeft == true)
+        if (throttle & rotateLeft == true)
         {
             Quaternion deltaRotation = Quaternion.Euler(-rotationVelocity * Time.deltaTime);
             rb.MoveRotation(rb.rotation * deltaRotation);
+            //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
 
             /*//Clamping rotation to prevent car from capsizing (DOESN'T WORK YET)
             rotationZ = rb.transform.localEulerAngles.z;
