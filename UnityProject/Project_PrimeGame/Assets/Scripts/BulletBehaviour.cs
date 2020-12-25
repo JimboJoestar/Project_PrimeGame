@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
+    public float damage = 10;
     private void OnTriggerEnter(Collider other)
     {
-        print("hit" + other.name);
         Destroy(gameObject);
     }
 }
