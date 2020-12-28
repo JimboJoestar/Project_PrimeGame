@@ -1401,6 +1401,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 475663335013754627, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1389621801514129675, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 2.5
@@ -1408,6 +1412,10 @@ PrefabInstance:
     - target: {fileID: 2362977919186001152, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
       propertyPath: m_Name
       value: Dreadnaught
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784481267603314981, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4589136926454444894, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
       propertyPath: m_ConnectedAnchor.z
@@ -1459,6 +1467,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7960478970578123639, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709509842996140103, guid: 9226ad890862d874dac9c87e5a1d9692, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

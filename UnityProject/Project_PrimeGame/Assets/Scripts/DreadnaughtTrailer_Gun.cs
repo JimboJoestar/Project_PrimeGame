@@ -6,8 +6,11 @@ public class DreadnaughtTrailer_Gun : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
-    public float bulletSpeed = 30;
-    public float bulletLifeTime = 3;
+    public float bulletSpeed = 5;
+    public float bulletLifeTime = 5;
+    private bool allowFire = true;
+    public float rof = 1f;
+    public bool fullAuto = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,12 @@ public class DreadnaughtTrailer_Gun : MonoBehaviour
         /*Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.LookAt(worldPosition);*/
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && fullAuto && allowFire)
+        {
+            Fire();
+        }
+
+        if (Input.GetButtonDown("Fire1") && !fullAuto && allowFire)
         {
             Fire();
         }
@@ -36,11 +44,14 @@ public class DreadnaughtTrailer_Gun : MonoBehaviour
 
     private void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab);//instantiate bullet from prefab
-        bullet.transform.position = bulletSpawn.position;
-        bullet.transform.rotation = bulletSpawn.rotation;
-        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);//adds force to bullets
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);//instantiate bullet from prefab
+        if (bullet.GetComponent<Rigidbody>() != null)
+        {
+            bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);//adds force to bullets, if needed
+        }
         StartCoroutine(DestroyBulletAfterTime(bullet, bulletLifeTime));
+        StartCoroutine(FireRate());
+
     }
 
     private IEnumerator DestroyBulletAfterTime(GameObject bullet, float delay) //apparently needed to destroy the bullet after some time, not very well explained in tut
@@ -48,5 +59,11 @@ public class DreadnaughtTrailer_Gun : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(bullet);
     }
-    
+
+    private IEnumerator FireRate()
+    {
+        allowFire = false;
+        yield return new WaitForSeconds(rof);
+        allowFire = true;
+    }
 }

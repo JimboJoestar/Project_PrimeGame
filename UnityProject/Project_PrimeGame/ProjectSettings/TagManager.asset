@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Gun_Artillery
+  - Gun_Mini
+  - Gun_Beam
   layers:
   - Default
   - TransparentFX

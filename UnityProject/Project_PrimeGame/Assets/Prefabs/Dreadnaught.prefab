@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1389621801514129676}
   - component: {fileID: 1389621801514129677}
   - component: {fileID: 746931573810467814}
+  - component: {fileID: 4109454210037489544}
   m_Layer: 0
   m_Name: Dreadnaught_FrontCar
   m_TagString: Untagged
@@ -206,6 +207,18 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4109454210037489544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389621801514129682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42c2bb3dec8a4844be27bd2b1783aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2362977919186001152
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +341,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7960478970578123639}
     m_Modifications:
+    - target: {fileID: 1065597221481606953, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_TagString
+      value: Gun_Mini
+      objectReference: {fileID: 0}
     - target: {fileID: 6337159961350791408, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_ConnectedBody
       value: 
@@ -411,6 +436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7960478970578123639}
     m_Modifications:
+    - target: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_TagString
+      value: Gun_Beam
+      objectReference: {fileID: 0}
     - target: {fileID: 6337159961350791408, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_Anchor.y
       value: 0
@@ -499,6 +528,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7960478970578123639}
     m_Modifications:
+    - target: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_TagString
+      value: Gun_Artillery
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105943358598772744, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6337159961350791408, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_ConnectedBody
       value: 
@@ -510,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 6337159961350791408, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223106331468305565, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_Name
+      value: Mesh
       objectReference: {fileID: 0}
     - target: {fileID: 8869016458629442548, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_RootOrder
