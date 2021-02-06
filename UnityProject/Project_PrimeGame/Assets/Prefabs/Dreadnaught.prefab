@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1389621801514129676}
   - component: {fileID: 1389621801514129677}
   - component: {fileID: 746931573810467814}
-  - component: {fileID: 4109454210037489544}
+  - component: {fileID: 5599059976374071671}
   m_Layer: 0
   m_Name: Dreadnaught_FrontCar
   m_TagString: Untagged
@@ -207,7 +207,7 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &4109454210037489544
+--- !u!114 &5599059976374071671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,9 +216,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389621801514129682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42c2bb3dec8a4844be27bd2b1783aa0, type: 3}
+  m_Script: {fileID: 11500000, guid: 40f9a2fc91da20b44af47d04a14429e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2362977919186001152
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +229,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7960478970578123639}
+  - component: {fileID: 2711568979620017466}
+  - component: {fileID: 7568995354408811082}
   m_Layer: 0
   m_Name: Dreadnaught
   m_TagString: Untagged
@@ -253,6 +256,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2711568979620017466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362977919186001152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42c2bb3dec8a4844be27bd2b1783aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 9046876449713317460}
+  - {fileID: 2126031818241003932}
+  - {fileID: 3784481267603314981}
+--- !u!114 &7568995354408811082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362977919186001152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16647a02eafe5b54bb885778160f050d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9123365229686244297
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +460,11 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8869016458629442552, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
   m_PrefabInstance: {fileID: 1389621801044360885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2126031818241003932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1065597221481606953, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+  m_PrefabInstance: {fileID: 1389621801044360885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1389621801457013497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -437,8 +473,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7960478970578123639}
     m_Modifications:
     - target: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_TagString
       value: Gun_Beam
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868159657248443356, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6337159961350791408, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
       propertyPath: m_Anchor.y
@@ -508,6 +552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dreadnaught_Trailer
       objectReference: {fileID: 0}
+    - target: {fileID: 8869016458629442549, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6337159961350791408, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
@@ -519,6 +567,11 @@ Transform:
 --- !u!54 &7520447125646784769 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8869016458629442552, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+  m_PrefabInstance: {fileID: 1389621801457013497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3784481267603314981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2868159657248443356, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
   m_PrefabInstance: {fileID: 1389621801457013497}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7520447125773456302
@@ -615,5 +668,10 @@ Transform:
 --- !u!54 &1389621801464035414 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8869016458629442552, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
+  m_PrefabInstance: {fileID: 7520447125773456302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9046876449713317460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1572047511749129722, guid: f04ca57ae1d40734db280ec922cd358f, type: 3}
   m_PrefabInstance: {fileID: 7520447125773456302}
   m_PrefabAsset: {fileID: 0}
